@@ -45,9 +45,11 @@ function __rest(s, e) {
 
 var e=[],t=[];function injector_86af753e(n,r){if(n&&"undefined"!=typeof document){void 0===r&&(r={});var d,a=!0===r.prepend?"prepend":"append",i="undefined"!=typeof r.singleTag&&r.singleTag,s="undefined"!=typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(i){var u=e.indexOf(s);-1===u&&(u=e.push(s)-1,t[u]={}),d=t[u]&&t[u][a]?t[u][a]:t[u][a]=o();}else d=o();65279===n.charCodeAt(0)&&(n=n.substring(1)),d.styleSheet?d.styleSheet.cssText+=n:d.appendChild(document.createTextNode(n));}function o(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var d="prepend"===a?"afterbegin":"beforeend";return s.insertAdjacentElement(d,e),e}}
 
-const css_c9fe2d6b = ".whole-container {\n  position: relative;\n  box-sizing: border-box; }\n  .whole-container .show-popup {\n    opacity: 1;\n    visibility: visible; }\n  .whole-container .hide-popup {\n    opacity: 0;\n    visibility: hidden; }\n  .whole-container .icon-container {\n    display: inline-block;\n    clear: both;\n    float: left; }\n  .whole-container .popup-container {\n    position: relative;\n    transition: all 200ms ease;\n    top: 45px; }\n    .whole-container .popup-container .popup-content {\n      box-sizing: border-box;\n      background-color: white;\n      border: solid 1px lightgrey;\n      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n      position: absolute;\n      overflow: scroll;\n      z-index: 500;\n      padding: 10px;\n      top: 0px; }\n    .whole-container .popup-container .popup-arrow {\n      position: absolute;\n      padding: 8px;\n      transform: rotate(-45deg);\n      background-color: white;\n      border-right: solid 1px lightgrey;\n      border-top: solid 1px lightgrey;\n      z-index: 501;\n      top: -8px; }\n";
+const css_c9fe2d6b = ".whole-container {\n  position: relative;\n  box-sizing: border-box; }\n  .whole-container .show-popup {\n    opacity: 1; }\n  .whole-container .hide-popup {\n    opacity: 0;\n    pointer-events: none;\n    cursor: default; }\n  .whole-container .icon-container {\n    display: inline-block;\n    clear: both;\n    float: left;\n    cursor: pointer; }\n  .whole-container .popup-container {\n    position: relative;\n    transition: all 200ms ease;\n    top: 45px; }\n    .whole-container .popup-container .popup-content {\n      box-sizing: border-box;\n      background-color: white;\n      border: solid 1px lightgrey;\n      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n      position: absolute;\n      overflow: scroll;\n      z-index: 500;\n      padding: 10px;\n      top: 0px; }\n    .whole-container .popup-container .popup-arrow {\n      position: absolute;\n      padding: 8px;\n      transform: rotate(-45deg);\n      background-color: white;\n      border-right: solid 1px lightgrey;\n      border-top: solid 1px lightgrey;\n      z-index: 501;\n      top: -8px; }\n";
 injector_86af753e(css_c9fe2d6b);
 
+var ARROW_WIDTH = 22;
+var EXTRA_WIDTH = 10;
 function IconPopup(_a) {
     var popupContent = _a.popupContent, popupTriggerer = _a.popupTriggerer, _b = _a.containerStyle, containerStyle = _b === void 0 ? {} : _b, _c = _a.arrowStyle, _d = _c === void 0 ? {} : _c, arrowTopIgnore = _d.top, arrowLeftIgnore = _d.left, arrowStyle = __rest(_d, ["top", "left"]), _e = _a.popupStyle, _f = _e === void 0 ? {} : _e, popupTopIgnore = _f.top, popupLeftIgnore = _f.left, popupStyle = __rest(_f, ["top", "left"]), onPopupTrigger = _a.onPopupTrigger, popupWidthInPx = _a.popupWidthInPx, popupMaxHeightInPx = _a.popupMaxHeightInPx;
     var _g = React.useState(false), isPopupOpen = _g[0], setIsPopupOpen = _g[1];
@@ -95,14 +97,17 @@ function IconPopup(_a) {
                 setIsPopupOpen(!isPopupOpen);
             }, ref: triggerRef, className: "icon-container" }, popupTriggerer),
         React__default.createElement("div", { className: "popup-container " + (isPopupOpen ? "show-popup" : "hide-popup"), style: {
-                left: position === "right"
-                    ? triggerWidth / 2 - 15 + "px"
-                    : "-" + (popupWidthInPx - triggerWidth / 2 - 15) + "px",
+                left: position === "left"
+                    ? "-" + (popupWidthInPx -
+                        triggerWidth / 2 -
+                        ARROW_WIDTH / 2 -
+                        EXTRA_WIDTH) + "px"
+                    : triggerWidth / 2 - ARROW_WIDTH / 2 - EXTRA_WIDTH + "px",
                 maxHeight: popupMaxHeightInPx ? popupMaxHeightInPx + "px" : undefined,
             } },
             React__default.createElement("div", { className: "popup-arrow", style: __assign(__assign({}, arrowStyle), { left: position === "left"
-                        ? popupWidthInPx - triggerWidth / 2 - 7.5 + "px"
-                        : "7.5px" }) }),
+                        ? popupWidthInPx - ARROW_WIDTH - EXTRA_WIDTH + "px"
+                        : ARROW_WIDTH / 2 + EXTRA_WIDTH + "px" }) }),
             React__default.createElement("div", { className: "popup-content", style: __assign(__assign({}, popupStyle), { width: popupWidthInPx }) }, popupContent))));
 }
 
