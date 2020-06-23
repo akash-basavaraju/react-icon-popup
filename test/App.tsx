@@ -36,7 +36,7 @@ export default function App() {
           onPopupTrigger={(...args) => {
             console.log(args);
           }}
-          popupWidthInPx={500}
+          popupWidthInPx={600}
         />
       </div>
     </>

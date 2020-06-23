@@ -585,7 +585,7 @@
 
 	var e=[],t$1=[];function injector_86af753e(n,r){if(n&&"undefined"!=typeof document){void 0===r&&(r={});var d,a=!0===r.prepend?"prepend":"append",i="undefined"!=typeof r.singleTag&&r.singleTag,s="undefined"!=typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(i){var u=e.indexOf(s);-1===u&&(u=e.push(s)-1,t$1[u]={}),d=t$1[u]&&t$1[u][a]?t$1[u][a]:t$1[u][a]=o();}else d=o();65279===n.charCodeAt(0)&&(n=n.substring(1)),d.styleSheet?d.styleSheet.cssText+=n:d.appendChild(document.createTextNode(n));}function o(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var d="prepend"===a?"afterbegin":"beforeend";return s.insertAdjacentElement(d,e),e}}
 
-	const css_c9fe2d6b = ".whole-container {\n  position: relative; }\n  .whole-container .show-popup {\n    opacity: 1;\n    visibility: visible; }\n  .whole-container .hide-popup {\n    opacity: 0;\n    visibility: hidden; }\n  .whole-container .icon-container {\n    display: inline-block;\n    clear: both;\n    float: left; }\n  .whole-container .popup-container {\n    position: relative;\n    transition: all 200ms ease;\n    top: 45px; }\n    .whole-container .popup-container .popup-content {\n      background-color: white;\n      border: solid 1px lightgrey;\n      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n      position: absolute;\n      overflow: scroll;\n      z-index: 500;\n      padding: 10px;\n      top: 0px; }\n    .whole-container .popup-container .popup-arrow {\n      position: absolute;\n      padding: 8px;\n      transform: rotate(-45deg);\n      background-color: white;\n      border-right: solid 1px lightgrey;\n      border-top: solid 1px lightgrey;\n      z-index: 501;\n      top: -8px; }\n    .whole-container .popup-container .arrow-right {\n      left: 15px; }\n";
+	const css_c9fe2d6b = ".whole-container {\n  position: relative;\n  box-sizing: border-box; }\n  .whole-container .show-popup {\n    opacity: 1;\n    visibility: visible; }\n  .whole-container .hide-popup {\n    opacity: 0;\n    visibility: hidden; }\n  .whole-container .icon-container {\n    display: inline-block;\n    clear: both;\n    float: left; }\n  .whole-container .popup-container {\n    position: relative;\n    transition: all 200ms ease;\n    top: 45px; }\n    .whole-container .popup-container .popup-content {\n      background-color: white;\n      border: solid 1px lightgrey;\n      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n      position: absolute;\n      overflow: scroll;\n      z-index: 500;\n      padding: 10px;\n      top: 0px; }\n    .whole-container .popup-container .popup-arrow {\n      position: absolute;\n      padding: 8px;\n      transform: rotate(-45deg);\n      background-color: white;\n      border-right: solid 1px lightgrey;\n      border-top: solid 1px lightgrey;\n      z-index: 501;\n      top: -8px; }\n    .whole-container .popup-container .arrow-right {\n      left: 15px; }\n";
 	injector_86af753e(css_c9fe2d6b);
 
 	function IconPopup(_a) {
@@ -666,7 +666,7 @@
 	                        args[_i] = arguments[_i];
 	                    }
 	                    console.log(args);
-	                }, popupWidthInPx: 500 }))));
+	                }, popupWidthInPx: 600 }))));
 	}
 
 	reactDom.render(react.createElement(App, null), document.getElementById("root"));

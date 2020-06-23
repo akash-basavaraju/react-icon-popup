@@ -5,3 +5,5 @@ src/
 tsconfig.json
 rollup.config.js
 test/
+demo.png
+yarn.lock

@@ -1,5 +1,6 @@
 .whole-container {
   position: relative;
+  box-sizing: border-box;
 
   .show-popup {
     opacity: 1;
