@@ -55,8 +55,6 @@ export default function IconPopup({
       triggerRef.current.offsetWidth
     ) {
       // @ts-ignore
-      console.log(triggerRef?.current?.offsetWidth);
-      // @ts-ignore
       return triggerRef?.current?.offsetWidth;
     }
   }, [triggerRef.current]);

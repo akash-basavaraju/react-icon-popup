@@ -46,15 +46,16 @@ function main() {
 
 ## IconPopup
 
-| Key            | Value Type       | Is Optional | Info                                                   |
-| -------------- | ---------------- | ----------- | ------------------------------------------------------ |
-| popupContent   | React Element    | No          | will be rendered inside the popup                      |
-| popupTriggerer | React Element    | No          | will be rendered as popup opener/closer                |
-| popupWidthInPx | number           | No          | should specify the required width of the popup content |
-| containerStyle | object           | Yes         | same as react style object \*                          |
-| arrowStyle     | object           | Yes         | same as react style object \*                          |
-| popupStyle     | object           | Yes         | same as react style object \*                          |
-| onPopupTrigger | (isOpened,event) | Yes         | will called when popup opens or closes                 |
+| Key                | Value Type       | Is Optional | Info                                                   |
+| ------------------ | ---------------- | ----------- | ------------------------------------------------------ |
+| popupContent       | React Element    | No          | will be rendered inside the popup                      |
+| popupTriggerer     | React Element    | No          | will be rendered as popup opener/closer                |
+| popupWidthInPx     | number           | No          | should specify the required width of the popup content |
+| containerStyle     | object           | Yes         | same as react style object \*                          |
+| arrowStyle         | object           | Yes         | same as react style object \*                          |
+| popupStyle         | object           | Yes         | same as react style object \*                          |
+| onPopupTrigger     | (isOpened,event) | Yes         | will called when popup opens or closes                 |
+| popupMaxHeightInPx | number           | Yes         | can specify mini height for the popup content          |
 
 \* - some position css attributes will be removed
 

@@ -57,14 +57,12 @@ function IconPopup(_a) {
         }
     }, [wrapperRef]);
     var triggerWidth = useMemo(function () {
-        var _a, _b;
+        var _a;
         if (triggerRef.current &&
             // @ts-ignore
             triggerRef.current.offsetWidth) {
             // @ts-ignore
-            console.log((_a = triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) === null || _a === void 0 ? void 0 : _a.offsetWidth);
-            // @ts-ignore
-            return (_b = triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) === null || _b === void 0 ? void 0 : _b.offsetWidth;
+            return (_a = triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) === null || _a === void 0 ? void 0 : _a.offsetWidth;
         }
     }, [triggerRef.current]);
     useEffect(function () {
