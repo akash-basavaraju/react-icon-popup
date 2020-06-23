@@ -1,6 +1,6 @@
 {
   "name": "react-icon-popup",
-  "version": "1.0.3-0",
+  "version": "1.0.4-0",
   "description": "A Tiny Icon Popup Component for React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
