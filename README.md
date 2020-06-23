@@ -2,13 +2,17 @@
 
 A Tiny React Icon Popup. Its compatable with typescript.
 
+## Demo
+
+![Demo](demo.png)
+
 ## How to Use
 
 First install the package with npm
 
 `$ npm i react-icon-popup --save`
 
-package usage below
+Import IconPoup from the package.
 
 ```js
 import IconPopup from "react-icon-popup";
@@ -38,10 +42,22 @@ function main() {
 }
 ```
 
+# API
+
+## IconPopup
+
+| Key            | Value Type       | Is Optional | Info                                                   |
+| -------------- | ---------------- | ----------- | ------------------------------------------------------ |
+| popupContent   | React Element    | No          | will be rendered inside the popup                      |
+| popupTriggerer | React Element    | No          | will be rendered as popup opener/closer                |
+| popupWidthInPx | number           | No          | should specify the required width of the popup content |
+| containerStyle | object           | Yes         | same as react style object \*                          |
+| arrowStyle     | object           | Yes         | same as react style object \*                          |
+| popupStyle     | object           | Yes         | same as react style object \*                          |
+| onPopupTrigger | (isOpened,event) | Yes         | will called when popup opens or closes                 |
+
+\* - some position css attributes will be removed
+
 #### Raising Issues and PRs are heartly welcomed.
 
 ##### with :heart: by [Akash Basavaraju](https://github.com/akash-basavaraju)
-
-```
-
-```

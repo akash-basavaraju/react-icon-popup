@@ -5,7 +5,7 @@ export default function App() {
     <>
       <div style={{ padding: "20px" }}>
         <IconPopup
-          popupTriggerer={<span>Left Sided</span>}
+          popupTriggerer={<span>Popup Opener</span>}
           popupContent={
             <div
               onClick={() => {
@@ -18,7 +18,7 @@ export default function App() {
           onPopupTrigger={(...args) => {
             console.log(args);
           }}
-          popupWidthInPx={100}
+          popupWidthInPx={300}
         />
       </div>
       <div style={{ padding: "20px", float: "right" }}>

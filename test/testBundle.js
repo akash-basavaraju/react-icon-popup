@@ -648,7 +648,7 @@
 	function App() {
 	    return (react.createElement(react.Fragment, null,
 	        react.createElement("div", { style: { padding: "20px" } },
-	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Left Sided"), popupContent: react.createElement("div", { onClick: function () {
+	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Popup Opener"), popupContent: react.createElement("div", { onClick: function () {
 	                        alert("popup clicked");
 	                    } }, "This is inside the Popup"), onPopupTrigger: function () {
 	                    var args = [];
@@ -656,7 +656,7 @@
 	                        args[_i] = arguments[_i];
 	                    }
 	                    console.log(args);
-	                }, popupWidthInPx: 100 })),
+	                }, popupWidthInPx: 300 })),
 	        react.createElement("div", { style: { padding: "20px", float: "right" } },
 	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Right Sided"), popupContent: react.createElement("div", { onClick: function () {
 	                        alert("popup clicked");
