@@ -648,9 +648,9 @@
 	function App() {
 	    return (react.createElement(react.Fragment, null,
 	        react.createElement("div", { style: { padding: "20px" } },
-	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Hisdfgsdvfg"), popupContent: react.createElement("div", { onClick: function () {
-	                        alert("clikced");
-	                    } }, "This is the popup"), onPopupTrigger: function () {
+	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Left Sided"), popupContent: react.createElement("div", { onClick: function () {
+	                        alert("popup clicked");
+	                    } }, "This is inside the Popup"), onPopupTrigger: function () {
 	                    var args = [];
 	                    for (var _i = 0; _i < arguments.length; _i++) {
 	                        args[_i] = arguments[_i];
@@ -658,15 +658,15 @@
 	                    console.log(args);
 	                }, popupWidthInPx: 100 })),
 	        react.createElement("div", { style: { padding: "20px", float: "right" } },
-	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Hisaergt"), popupContent: react.createElement("div", { onClick: function () {
-	                        alert("clikced");
-	                    } }, "This is the popup"), onPopupTrigger: function () {
+	            react.createElement(IconPopup, { popupTriggerer: react.createElement("span", null, "Right Sided"), popupContent: react.createElement("div", { onClick: function () {
+	                        alert("popup clicked");
+	                    } }, "This is inside the Popup"), onPopupTrigger: function () {
 	                    var args = [];
 	                    for (var _i = 0; _i < arguments.length; _i++) {
 	                        args[_i] = arguments[_i];
 	                    }
 	                    console.log(args);
-	                }, popupWidthInPx: 50 }))));
+	                }, popupWidthInPx: 500 }))));
 	}
 
 	reactDom.render(react.createElement(App, null), document.getElementById("root"));
