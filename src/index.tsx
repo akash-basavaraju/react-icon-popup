@@ -12,6 +12,7 @@ interface IIconPopupProps {
     event: React.MouseEvent<HTMLDivElement>
   ) => void;
   popupWidthInPx: number;
+  popupMaxHeightInPx?: number;
 }
 
 export default function IconPopup({
@@ -30,6 +31,7 @@ export default function IconPopup({
   } = {},
   onPopupTrigger,
   popupWidthInPx,
+  popupMaxHeightInPx,
 }: IIconPopupProps): JSX.Element {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const wrapperRef = useRef(null);
@@ -98,14 +100,18 @@ export default function IconPopup({
           left:
             position === "right"
               ? `${triggerWidth / 2 - 15}px`
-              : `-${popupWidthInPx + 22 - triggerWidth / 2 - 15}px`,
+              : `-${popupWidthInPx - triggerWidth / 2 - 15}px`,
+          maxHeight: popupMaxHeightInPx ? `${popupMaxHeightInPx}px` : undefined,
         }}
       >
         <div
-          className={`popup-arrow arrow-${position}`}
+          className={`popup-arrow`}
           style={{
             ...arrowStyle,
-            left: position === "left" ? `${popupWidthInPx}px` : "7px",
+            left:
+              position === "left"
+                ? `${popupWidthInPx - triggerWidth / 2 - 7.5}px`
+                : "7.5px",
           }}
         />
         <div

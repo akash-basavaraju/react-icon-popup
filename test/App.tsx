@@ -19,6 +19,7 @@ export default function App() {
             console.log(args);
           }}
           popupWidthInPx={300}
+          popupMaxHeightInPx={500}
         />
       </div>
       <div style={{ padding: "20px", float: "right" }}>
@@ -37,6 +38,7 @@ export default function App() {
             console.log(args);
           }}
           popupWidthInPx={600}
+          popupMaxHeightInPx={500}
         />
       </div>
     </>

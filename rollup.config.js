@@ -27,7 +27,7 @@ export default !argv.includes("--testbundle")
   : {
       input: "./test/index.tsx",
       output: {
-        file: "test/testBundle.js",
+        file: "test/bundle/testBundle.js",
         format: "iife",
         name: "bundle",
         sourcemap: true,
