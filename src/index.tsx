@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import "./index.scss";
 
+const ARROW_WIDTH = 22;
+const EXTRA_WIDTH = 10;
+
 interface IIconPopupProps {
   popupContent: JSX.Element;
   popupTriggerer: JSX.Element;
@@ -96,9 +99,14 @@ export default function IconPopup({
         }`}
         style={{
           left:
-            position === "right"
-              ? `${triggerWidth / 2 - 15}px`
-              : `-${popupWidthInPx - triggerWidth / 2 - 15}px`,
+            position === "left"
+              ? `-${
+                  popupWidthInPx -
+                  triggerWidth / 2 -
+                  ARROW_WIDTH / 2 -
+                  EXTRA_WIDTH
+                }px`
+              : `${triggerWidth / 2 - ARROW_WIDTH / 2 - EXTRA_WIDTH}px`,
           maxHeight: popupMaxHeightInPx ? `${popupMaxHeightInPx}px` : undefined,
         }}
       >
@@ -108,8 +116,8 @@ export default function IconPopup({
             ...arrowStyle,
             left:
               position === "left"
-                ? `${popupWidthInPx - triggerWidth / 2 - 7.5}px`
-                : "7.5px",
+                ? `${popupWidthInPx - ARROW_WIDTH - EXTRA_WIDTH}px`
+                : `${ARROW_WIDTH / 2 + EXTRA_WIDTH}px`,
           }}
         />
         <div

@@ -4,18 +4,19 @@
 
   .show-popup {
     opacity: 1;
-    visibility: visible;
   }
 
   .hide-popup {
     opacity: 0;
-    visibility: hidden;
+    pointer-events: none;
+    cursor: default;
   }
 
   .icon-container {
     display: inline-block;
     clear: both;
     float: left;
+    cursor: pointer;
   }
 
   .popup-container {
