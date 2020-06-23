@@ -1,6 +1,5 @@
 node_modules/
 src/
-package-lock.json
 .gitignore
 .eslintrc.json
 tsconfig.json
