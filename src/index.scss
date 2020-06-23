@@ -1,0 +1,52 @@
+.whole-container {
+  position: relative;
+
+  .show-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hide-popup {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .icon-container {
+    display: inline-block;
+    clear: both;
+    float: left;
+  }
+
+  .popup-container {
+    position: relative;
+    transition: all 200ms ease;
+    top: 45px;
+
+    .popup-content {
+      background-color: white;
+      border: solid 1px lightgrey;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      position: absolute;
+      overflow: scroll;
+      z-index: 500;
+      padding: 10px;
+      top: 0px;
+    }
+
+    .popup-arrow {
+      position: absolute;
+      padding: 8px;
+      transform: rotate(-45deg);
+      background-color: white;
+      border-right: solid 1px lightgrey;
+      border-top: solid 1px lightgrey;
+      z-index: 501;
+      top: -8px;
+    }
+
+    .arrow-right {
+      left: 15px;
+    }
+  }
+}

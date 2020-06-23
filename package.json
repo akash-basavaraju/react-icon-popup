@@ -1,26 +1,33 @@
 {
-  "name": "npm-package-boilerplate",
+  "name": "react-icon-popup",
   "version": "1.0.0",
   "description": "This is a boilerplate for creating the various npm packages",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "prepublish": "npm run build"
+    "test": "rollup -c --testbundle"
   },
   "author": "Akash Basavaraju <bmnakash@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.13.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@rollup/plugin-replace": "^2.3.3",
     "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.3.0",
     "eslint-plugin-react": "^7.20.0",
-    "prettier": "2.0.5",
+    "node-sass": "^4.14.1",
+    "prettier": "2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rollup": "^2.18.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-delete": "^2.0.0",
@@ -38,7 +45,8 @@
   "keywords": [
     "react",
     "typescript",
-    "rollup"
+    "rollup",
+    "icon popup"
   ],
   "homepage": "https://github.com/akash-basavaraju"
 }
