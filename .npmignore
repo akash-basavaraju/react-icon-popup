@@ -4,6 +4,6 @@ src/
 .eslintrc.json
 tsconfig.json
 rollup.config.js
-test/
+dev/
 demo.png
 yarn.lock

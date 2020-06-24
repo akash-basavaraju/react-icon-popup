@@ -7,7 +7,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "test": "rollup -c --testbundle"
+    "dev": "rollup -c './dev/rollup.config.js' -w",
+    "prepublish": "npm run build"
   },
   "author": "Akash Basavaraju <bmnakash@gmail.com>",
   "license": "MIT",
@@ -31,6 +32,7 @@
     "rollup": "^2.18.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-styles": "^3.8.2",
     "rollup-plugin-typescript2": "^0.27.1",
     "typescript": "^3.9.5"
@@ -46,7 +48,8 @@
     "react",
     "typescript",
     "rollup",
-    "icon popup"
+    "icon popup",
+    "popup"
   ],
   "homepage": "https://github.com/akash-basavaraju/react-icon-popup#readme"
 }

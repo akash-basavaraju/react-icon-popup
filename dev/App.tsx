@@ -1,5 +1,6 @@
 import React from "react";
 import IconPopup from "../src";
+
 export default function App() {
   return (
     <>
@@ -37,8 +38,8 @@ export default function App() {
           onPopupTrigger={(...args) => {
             console.log(args);
           }}
-          popupWidthInPx={600}
-          popupMaxHeightInPx={500}
+          popupWidthInPx={100}
+          popupMaxHeightInPx={100}
         />
       </div>
     </>
